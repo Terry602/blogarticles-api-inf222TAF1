@@ -1,8 +1,12 @@
 Blog Articles API
+
+
  Cette application est une API REST développée avec Spring Boot permettant la gestion      complète d’articles de blog.
  
  Fonctionnalités
-	CRUD Articles
+ 
+ CRUD Articles
+
 •	Créer un article
 •	Lire tous les articles
 •	Lire un article par ID
@@ -10,9 +14,11 @@ Blog Articles API
 •	Supprimer un article
 
 	Recherche
+
 •	Recherche par titre ou contenu
 
 	Filtres
+
 •	Par catégorie
 •	Par auteur
 •	Par date
@@ -29,12 +35,11 @@ Blog Articles API
  
 	Installation du projet
 
-•	Cloner le projet
-git clone https://github.com/TON_USERNAME/blogarticles-api.git
-•	Accéder au dossier
-cd blogarticles-api
+•	Cloner le projet:  git clone https://github.com/TON_USERNAME/blogarticles-api.git
+•	Accéder au dossier: cd blogarticles-api
  
 •	Configurer la base de données
+
 Dans application.properties :
 spring.datasource.url=jdbc:mysql://localhost:3306/blogdb
 spring.datasource.username=root
@@ -43,6 +48,7 @@ spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
  
 •	Lancer l'application
+
 Dans IntelliJ : Cliquer sur Run ou mvn spring-boot:run
 
 	Base URL
@@ -52,7 +58,9 @@ http://localhost:8080/api/articles
 	Endpoints API
 
 •	Créer un article
+
 POST /api/articles
+
 {
   "titre": "Mon article",
   "contenu": "Contenu ici",
@@ -63,23 +71,29 @@ POST /api/articles
 }
  
 •	Obtenir tous les articles
+
 GET /api/articles
  
 •	Filtrer
+
 GET /api/articles?categorie=Tech
 GET /api/articles?auteur=John
 GET /api/articles?date=2026-03-22
  
 •	Obtenir un article
+
 GET /api/articles/{id}
  
 •	Modifier
+
 PUT /api/articles/{id}
  
 •	Supprimer
+
 DELETE /api/articles/{id}
  
 •	Recherche
+
 GET /api/articles/search?query=texte
  
 	Gestion des erreurs
@@ -88,12 +102,14 @@ GET /api/articles/search?query=texte
 •	400 : requête invalide
 •	404 : article non trouvé
 •	500 : erreur serveur
+
 Exemple :
 {
   "titre": "Le titre est obligatoire"
 }
  
 	Tests
+
 Tous les endpoints ont été testés avec Postman : POST, GET, GET BY ID, PUT, DELETE, FILTER, SEARCH.
  
 	Structure du projet
@@ -110,4 +126,4 @@ Tous les endpoints ont été testés avec Postman : POST, GET, GET BY ID, PUT, D
 
  
 	Lien GitHub
-https://github.com/Terry60
+https://github.com/Terry602/blogarticles-api-inf222TAF1
