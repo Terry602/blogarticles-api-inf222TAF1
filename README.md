@@ -36,11 +36,13 @@ Blog Articles API
 	Installation du projet
 
 •	Cloner le projet:  git clone https://github.com/TON_USERNAME/blogarticles-api.git
+
 •	Accéder au dossier: cd blogarticles-api
  
 •	Configurer la base de données
 
 Dans application.properties :
+
 spring.datasource.url=jdbc:mysql://localhost:3306/blogdb
 spring.datasource.username=root
 spring.datasource.password=
@@ -77,7 +79,9 @@ GET /api/articles
 •	Filtrer
 
 GET /api/articles?categorie=Tech
+
 GET /api/articles?auteur=John
+
 GET /api/articles?date=2026-03-22
  
 •	Obtenir un article
@@ -104,6 +108,7 @@ GET /api/articles/search?query=texte
 •	500 : erreur serveur
 
 Exemple :
+
 {
   "titre": "Le titre est obligatoire"
 }
@@ -115,15 +120,20 @@ Tous les endpoints ont été testés avec Postman : POST, GET, GET BY ID, PUT, D
 	Structure du projet
 
 •	controller → gestion des routes
+
 •	repository → accès base de données
+
 •	model → entités
+
 •	exception → gestion erreurs
  
 	Auteur
 
   Djomo Terry
+  
   Projet académique 20226
 
  
 	Lien GitHub
+
 https://github.com/Terry602/blogarticles-api-inf222TAF1
